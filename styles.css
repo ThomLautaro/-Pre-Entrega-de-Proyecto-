@@ -1,558 +1,230 @@
-:root {
-  --papel: #EBDFC2;
-  --crema: #F6EDD6;
-  --tinta: #1D1812;
-  --mostaza: #D9AE48;
-  --azul: #46639E;
-  --ladrillo: #BE5640;
-  --f-titulo: "Bowlby One", "Arial Black", sans-serif;
-  --f-texto: "Poppins", Arial, sans-serif;
-  --f-mano: "Permanent Marker", cursive;
-  --borde: 3px solid var(--tinta);
-  --sombra: 5px 5px 0 var(--tinta);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: var(--f-texto);
-  color: var(--tinta);
-  line-height: 1.5;
-  background-color: var(--papel);
-  background-image:
-    linear-gradient(rgba(29, 24, 18, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(29, 24, 18, 0.07) 1px, transparent 1px);
-  background-size: 28px 28px;
-}
-
-h1, h2, h3 {
-  font-family: var(--f-titulo);
-  font-weight: 400;
-  line-height: 1.1;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-main {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 0 16px 56px;
-}
-
-section {
-  padding: 26px 0;
-}
-
-header {
-  background-color: var(--tinta);
-  border-bottom: var(--borde);
-}
-
-.nav {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 10px 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.marca {
-  display: flex;
-  align-items: baseline;
-  font-family: var(--f-titulo);
-  font-size: 2.5rem;
-  line-height: 1;
-  color: var(--mostaza);
-  text-decoration: none;
-}
-
-.letra-f {
-  height: 1.3em;
-  width: auto;
-}
-
-.pochoclo {
-  height: 1em;
-  width: auto;
-  margin-left: 0.05em;
-}
-
-.nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.nav ul a {
-  display: inline-block;
-  padding: 4px 14px;
-  font-weight: 700;
-  font-size: 0.9rem;
-  text-decoration: none;
-  color: var(--tinta);
-  background-color: var(--crema);
-  border: var(--borde);
-  border-radius: 999px;
-  box-shadow: 3px 3px 0 var(--mostaza);
-}
-
-.nav li:nth-child(even) a {
-  background-color: var(--mostaza);
-  box-shadow: 3px 3px 0 var(--crema);
-}
-
-.nav li a:hover {
-  background-color: var(--ladrillo);
-  color: var(--crema);
-}
-
-.nav li:last-child {
-  margin-left: 18px;
-}
-
-.hero {
-  padding-top: 48px;
-}
-
-.hero h1 {
-  position: relative;
-  display: inline-block;
-  padding: 12px 44px;
-  font-size: clamp(2.2rem, 7vw, 3.8rem);
-  transform: rotate(1.5deg);
-  isolation: isolate;
-}
-
-.hero h1::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background:
-    radial-gradient(circle at 0 50%, transparent 18px, var(--mostaza) 19px) left / 51% 100% no-repeat,
-    radial-gradient(circle at 100% 50%, transparent 18px, var(--mostaza) 19px) right / 51% 100% no-repeat;
-  filter:
-    drop-shadow(3px 0 0 var(--tinta))
-    drop-shadow(-3px 0 0 var(--tinta))
-    drop-shadow(0 3px 0 var(--tinta))
-    drop-shadow(0 -3px 0 var(--tinta))
-    drop-shadow(5px 5px 0 var(--tinta));
-}
-
-.hero h1::after {
-  content: "";
-  position: absolute;
-  inset: 8px 30px;
-  z-index: -1;
-  border: 2px dashed var(--ladrillo);
-}
-
-.hero p {
-  max-width: 46ch;
-  margin: 22px 0 18px;
-  font-weight: 600;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 22px;
-  font-family: var(--f-titulo);
-  font-size: 1rem;
-  text-decoration: none;
-  color: var(--crema);
-  background-color: var(--azul);
-  border: var(--borde);
-  border-radius: 14px;
-  box-shadow: var(--sombra);
-}
-
-.btn:hover {
-  background-color: var(--ladrillo);
-}
-
-.etiqueta {
-  display: inline-block;
-  position: relative;
-  isolation: isolate;
-  margin-bottom: 22px;
-  padding: 6px 30px;
-  font-size: 1.1rem;
-  transform: rotate(-1.5deg);
-}
-
-.etiqueta::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background:
-    radial-gradient(circle at 0 50%, transparent 8px, var(--crema) 9px) left / 51% 100% no-repeat,
-    radial-gradient(circle at 100% 50%, transparent 8px, var(--crema) 9px) right / 51% 100% no-repeat;
-  filter:
-    drop-shadow(3px 0 0 var(--tinta))
-    drop-shadow(-3px 0 0 var(--tinta))
-    drop-shadow(0 3px 0 var(--tinta))
-    drop-shadow(0 -3px 0 var(--tinta))
-    drop-shadow(3px 3px 0 var(--tinta));
-}
-
-.etiqueta::after {
-  content: "";
-  position: absolute;
-  inset: 4px 16px;
-  z-index: -1;
-  border: 2px dashed var(--ladrillo);
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 26px;
-}
-
-.vhs {
-  position: relative;
-  flex: 1 1 250px;
-  max-width: 270px;
-  padding: 12px 12px 16px;
-  background-color: var(--crema);
-  border: var(--borde);
-  border-radius: 14px;
-  box-shadow: var(--sombra);
-}
-
-.vhs:nth-child(3n+1) { transform: rotate(-2deg); }
-.vhs:nth-child(3n+2) { transform: rotate(1.5deg); }
-.vhs:nth-child(3n)   { transform: rotate(-1deg); }
-
-.vhs:hover {
-  background-color: var(--mostaza);
-}
-
-.vhs img {
-  width: 100%;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
-  border: var(--borde);
-  border-radius: 8px;
-}
-
-.plat {
-  position: absolute;
-  top: -12px;
-  left: -10px;
-  z-index: 1;
-  padding: 2px 12px;
-  font-weight: 700;
-  font-size: 0.8rem;
-  background-color: var(--mostaza);
-  border: var(--borde);
-  border-radius: 999px;
-  box-shadow: 3px 3px 0 var(--tinta);
-  transform: rotate(-8deg);
-}
-
-.vhs h3 {
-  margin: 12px 0 2px;
-  font-size: 1.15rem;
-}
-
-.meta {
-  margin: 0 0 6px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  opacity: 0.8;
-}
-
-.resena {
-  margin: 6px 0 8px;
-  font-family: var(--f-mano);
-  font-size: 1rem;
-  line-height: 1.3;
-}
-
-.papas {
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-}
-
-.subtitulo {
-  margin: -8px 0 20px;
-}
-
-.top {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.puesto {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px;
-  background-color: var(--crema);
-  border: var(--borde);
-  border-radius: 14px;
-  box-shadow: var(--sombra);
-}
-
-.p1 {
-  grid-column: span 2;
-  background-color: var(--mostaza);
-}
-
-.puesto:hover {
-  background-color: var(--mostaza);
-}
-
-.p1:hover {
-  background-color: var(--ladrillo);
-  color: var(--crema);
-}
-
-.puesto img {
-  flex: 0 0 76px;
-  width: 76px;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
-  border: var(--borde);
-  border-radius: 6px;
-}
-
-.puesto h3 {
-  font-size: 1.15rem;
-}
-
-.puesto > div {
-  min-width: 0;
-}
-
-.num {
-  position: absolute;
-  top: -14px;
-  left: -10px;
-  display: grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  font-family: var(--f-titulo);
-  color: var(--crema);
-  background-color: var(--ladrillo);
-  border: var(--borde);
-  border-radius: 50%;
-  box-shadow: 3px 3px 0 var(--tinta);
-  transform: rotate(-8deg);
-}
-
-.vacio {
-  margin: 0;
-  padding: 28px 20px;
-  text-align: center;
-  font-weight: 600;
-  background-color: rgba(246, 237, 214, 0.6);
-  border: 3px dashed var(--tinta);
-  border-radius: 14px;
-}
-
-.ficha {
-  display: flex;
-  gap: 28px;
-  padding: 24px;
-  background-color: var(--crema);
-  border: var(--borde);
-  border-radius: 16px;
-  box-shadow: 8px 8px 0 var(--tinta);
-}
-
-.ficha > div {
-  flex: 1;
-  min-width: 0;
-}
-
-.ficha h3 {
-  margin-bottom: 10px;
-  font-size: 1.8rem;
-}
-
-label {
-  display: block;
-  margin: 10px 0 4px;
-  font-weight: 700;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 8px 10px;
-  font-family: inherit;
-  font-size: 1rem;
-  color: var(--tinta);
-  background-color: #FFF9E8;
-  border: var(--borde);
-  border-radius: 8px;
-}
-
-textarea {
-  min-height: 90px;
-  resize: vertical;
-}
-
-form .btn {
-  margin-top: 16px;
-  cursor: pointer;
-  background-color: var(--ladrillo);
-}
-
-footer {
-  padding-top: 34px;
-  color: var(--crema);
-  background-color: var(--tinta);
-  border-top: var(--borde);
-}
-
-.pie {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 0 16px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 32px;
-}
-
-.pie > div {
-  flex: 1 1 220px;
-  min-width: 0;
-}
-
-.pie h3 {
-  margin-bottom: 12px;
-  font-size: 1.1rem;
-  color: var(--mostaza);
-}
-
-.pie p {
-  margin: 0 0 10px;
-  font-size: 0.95rem;
-}
-
-.redes,
-.pie-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.redes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.redes a {
-  display: inline-block;
-  padding: 3px 14px;
-  font-weight: 700;
-  font-size: 0.85rem;
-  text-decoration: none;
-  color: var(--tinta);
-  background-color: var(--crema);
-  border: 3px solid var(--crema);
-  border-radius: 999px;
-  box-shadow: 3px 3px 0 var(--mostaza);
-}
-
-.redes li:nth-child(even) a {
-  background-color: var(--mostaza);
-  border-color: var(--mostaza);
-  box-shadow: 3px 3px 0 var(--crema);
-}
-
-.redes li a:hover {
-  background-color: var(--ladrillo);
-  border-color: var(--ladrillo);
-  color: var(--crema);
-}
-
-.pie-links li {
-  margin-bottom: 6px;
-}
-
-.pie-links a {
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--crema);
-}
-
-.pie-links a:hover {
-  color: var(--mostaza);
-}
-
-.mail {
-  font-weight: 700;
-  color: var(--mostaza);
-}
-
-.copy {
-  margin: 28px 0 0;
-  padding: 16px;
-  text-align: center;
-  font-size: 0.85rem;
-  font-weight: 600;
-  border-top: 2px dashed #5A4F40;
-}
-
-@media (max-width: 760px) {
-  .top {
-    grid-template-columns: 1fr;
-  }
-
-  .p1 {
-    grid-column: auto;
-  }
-}
-
-@media (max-width: 700px) {
-  .ficha {
-    flex-direction: column;
-    padding: 16px;
-    gap: 16px;
-  }
-
-  .ficha h3 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .vhs {
-    max-width: 240px;
-  }
-
-  .nav li:last-child {
-    margin-left: 0;
-  }
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Full Potato: películas recomendadas de Netflix, Disney+, Apple TV+, Prime Video y HBO Max, puntuadas en papas.">
+  <title>Full Potato</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Permanent+Marker&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <nav class="nav">
+      <a class="marca" href="#inicio" aria-label="Full Potato">
+        <img class="letra-f" src="img/f-claqueta.png" alt="F">ULL POTAT<img class="pochoclo" src="img/pochoclo.png" alt="O">
+      </a>
+
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#peliculas">Películas</a></li>
+        <li><a href="#resenas">Reseñas</a></li>
+        <li><a href="#suscripciones">Suscripciones</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="inicio">
+      <h1>Bienvenido al videoclub</h1>
+      <p>Películas originales de las plataformas, elegidas y puntuadas en papas por nosotros.</p>
+      <a class="btn" href="#peliculas">Ver películas</a>
+    </section>
+
+    <section id="peliculas">
+      <h2 class="etiqueta">Películas</h2>
+      <p class="meta subtitulo">Las películas que recomendamos, según la plataforma donde las podés ver.</p>
+
+      <div class="cards">
+        <article class="vhs">
+          <span class="plat">Netflix</span>
+          <img src="img/kpop-demon-hunters.jpg" alt="Póster de KPop Demon Hunters">
+          <h3>KPop Demon Hunters</h3>
+          <p class="meta">2025 · Animación · Musical</p>
+          <p class="resena">Un grupo de estrellas del K-pop protege al mundo de los demonios con su música.</p>
+          <span class="papas" aria-label="5 de 5 papas">🥔🥔🥔🥔🥔</span>
+        </article>
+
+        <article class="vhs">
+          <span class="plat">Netflix</span>
+          <img src="img/war-machine.jpg" alt="Póster de War Machine">
+          <h3>War Machine</h3>
+          <p class="meta">2026 · Acción · Ciencia ficción</p>
+          <p class="resena">Alan Ritchson se enfrenta a una amenaza alienígena.</p>
+          <span class="papas" aria-label="4 de 5 papas">🥔🥔🥔🥔</span>
+        </article>
+
+        <article class="vhs">
+          <span class="plat">Disney+</span>
+          <img src="img/descendants.jpg" alt="Póster de Descendants: The Rise of Red">
+          <h3>Descendants: The Rise of Red</h3>
+          <p class="meta">2024 · Musical · Fantasía</p>
+          <p class="resena">La hija de la Reina de Corazones y la hija de Cenicienta se unen en una aventura musical.</p>
+          <span class="papas" aria-label="3 de 5 papas">🥔🥔🥔</span>
+        </article>
+
+        <article class="vhs">
+          <span class="plat">Apple TV+</span>
+          <img src="img/f1.jpg" alt="Póster de F1 The Movie">
+          <h3>F1 The Movie</h3>
+          <p class="meta">2025 · Acción · Drama</p>
+          <p class="resena">Un piloto veterano vuelve a la Fórmula 1 para guiar a un joven equipo.</p>
+          <span class="papas" aria-label="4 de 5 papas">🥔🥔🥔🥔</span>
+        </article>
+
+        <article class="vhs">
+          <span class="plat">Prime Video</span>
+          <img src="img/the-idea-of-you.jpg" alt="Póster de The Idea of You">
+          <h3>The Idea of You</h3>
+          <p class="meta">2024 · Comedia romántica</p>
+          <p class="resena">Una mujer de 40 años y el cantante de una banda juvenil viven un romance inesperado.</p>
+          <span class="papas" aria-label="4 de 5 papas">🥔🥔🥔🥔</span>
+        </article>
+
+        <article class="vhs">
+          <span class="plat">HBO Max</span>
+          <img src="img/sinners.jpg" alt="Póster de Sinners">
+          <h3>Sinners</h3>
+          <p class="meta">2025 · Terror · Drama</p>
+          <p class="resena">Dos hermanos gemelos abren un bar en el Misisipi de los años 30 y una amenaza oscura aparece en la noche.</p>
+          <span class="papas" aria-label="5 de 5 papas">🥔🥔🥔🥔🥔</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="resenas">
+      <h2 class="etiqueta">Reseñas</h2>
+      <p class="meta subtitulo">Top Potato: las 5 mejor puntuadas del mes.</p>
+
+      <div class="top">
+        <article class="puesto p1">
+          <span class="num">1</span>
+          <img src="img/kpop-demon-hunters.jpg" alt="Póster de KPop Demon Hunters">
+          <div>
+            <h3>KPop Demon Hunters</h3>
+            <p class="meta">Netflix</p>
+            <span class="papas" aria-label="5 de 5 papas">🥔🥔🥔🥔🥔</span>
+            <p class="resena">Una de las películas más vistas de Netflix, con música que no se te va de la cabeza.</p>
+          </div>
+        </article>
+
+        <article class="puesto">
+          <span class="num">2</span>
+          <img src="img/sinners.jpg" alt="Póster de Sinners">
+          <div>
+            <h3>Sinners</h3>
+            <p class="meta">HBO Max</p>
+            <span class="papas" aria-label="5 de 5 papas">🥔🥔🥔🥔🥔</span>
+            <p class="resena">Terror, música y una noche que no se olvida.</p>
+          </div>
+        </article>
+
+        <article class="puesto">
+          <span class="num">3</span>
+          <img src="img/f1.jpg" alt="Póster de F1 The Movie">
+          <div>
+            <h3>F1 The Movie</h3>
+            <p class="meta">Apple TV+</p>
+            <span class="papas" aria-label="4 de 5 papas">🥔🥔🥔🥔</span>
+            <p class="resena">Carreras a toda velocidad con Brad Pitt.</p>
+          </div>
+        </article>
+
+        <article class="puesto">
+          <span class="num">4</span>
+          <img src="img/war-machine.jpg" alt="Póster de War Machine">
+          <div>
+            <h3>War Machine</h3>
+            <p class="meta">Netflix</p>
+            <span class="papas" aria-label="4 de 5 papas">🥔🥔🥔🥔</span>
+            <p class="resena">Acción y ciencia ficción con una amenaza alienígena.</p>
+          </div>
+        </article>
+
+        <article class="puesto">
+          <span class="num">5</span>
+          <img src="img/the-idea-of-you.jpg" alt="Póster de The Idea of You">
+          <div>
+            <h3>The Idea of You</h3>
+            <p class="meta">Prime Video</p>
+            <span class="papas" aria-label="4 de 5 papas">🥔🥔🥔🥔</span>
+            <p class="resena">Una comedia romántica con mucha música y emociones.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="suscripciones">
+      <h2 class="etiqueta">Suscripciones</h2>
+      <p class="vacio">Acá van los planes de suscripción (información a definir).</p>
+    </section>
+
+    <section id="contacto">
+      <div class="ficha">
+        <div>
+          <h2 class="etiqueta">Contacto</h2>
+          <h3>Ficha de socio</h3>
+          <p>¿Qué película tendríamos que sumar? Dejanos tu recomendación y nos llega por correo.</p>
+        </div>
+
+        <div>
+          <form action="https://formspree.io/f/TU_CODIGO" method="POST">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="vos@correo.com" required>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Te recomiendo..." required></textarea>
+
+            <button class="btn" type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="pie">
+      <div>
+        <h3>Full Potato</h3>
+        <p>Un proyecto independiente.<br>Donde te recomendamos las mejores películas que se encuentran en las plataformas.<br>Para poder disfrutar el mejor cine, desde tu sillón.</p>
+      </div>
+
+      <div>
+        <h3>Seguinos</h3>
+        <ul class="redes">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://x.com/" target="_blank" rel="noopener">X</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Recorré el local</h3>
+        <ul class="pie-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#peliculas">Películas</a></li>
+          <li><a href="#resenas">Reseñas</a></li>
+          <li><a href="#suscripciones">Suscripciones</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <p class="mail">fullpotato@correo.com</p>
+      </div>
+    </div>
+
+    <p class="copy">© 2026 Full Potato · Proyecto del curso de Front-End</p>
+  </footer>
+
+</body>
+</html>
