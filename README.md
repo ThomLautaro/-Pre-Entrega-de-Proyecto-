@@ -6,8 +6,8 @@ Pre-entrega del proyecto de Front-End (Clase 08 · Git y GitHub).
 
 ## Links
 
-- Sitio publicado: _(pegar acá el link de GitHub Pages o Netlify)_
-- Repositorio: _(pegar acá el link del repositorio en GitHub)_
+- Sitio publicado: https://thomlautaro.github.io/-Pre-Entrega-de-Proyecto-/  
+- Repositorio: https://github.com/ThomLautaro/-Pre-Entrega-de-Proyecto-
 
 ## Secciones
 
