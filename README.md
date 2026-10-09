@@ -2,7 +2,7 @@
 
 Pre-entrega del proyecto de Front-End (Clase 08 · Git y GitHub).
 
-**Full Potato** es una página que recomienda películas originales de las plataformas de streaming (Netflix, Disney+, Apple TV+, Prime Video y HBO Max). Cada película se puntúa con papas 🥔, del 1 a 5.
+**Full Potato** es una página que recomienda películas originales de las plataformas de streaming (Netflix, Disney+, Apple TV+, Prime Video y HBO Max). Cada película se puntúa con papas 🥔, de 1 a 5.
 
 ## Links
 
@@ -12,12 +12,12 @@ Pre-entrega del proyecto de Front-End (Clase 08 · Git y GitHub).
 ## Secciones
 
 - **Inicio**: bienvenida y botón para ir a las películas.
-- **Productos**: las películas, en tarjetas organizadas con Flexbox.
+- **Películas**: las películas, en tarjetas organizadas con Flexbox.
 - **Reseñas**: el Top Potato, las 5 mejor puntuadas del mes, organizadas con Grid.
-- **Suscripciones**: espacio reservado, el contenido se define para más adelante.
+- **Suscripciones**: espacio reservado, el contenido se define más adelante.
 - **Contacto**: formulario con nombre, correo y mensaje, enviado con Formspree.
 
-## Que se utilizo
+## Qué se usó
 
 - HTML semántico (`header`, `nav`, `main`, `section`, `footer`).
 - Menú de navegación con lista `<ul>` y enlaces internos.
@@ -38,5 +38,6 @@ full-potato/
 
 ## Notas
 
-- Los textos de las películas son breves fragmentos y sinopsis con fines educativos.
+- Los textos de las películas son breves fragmentos y sinopsis sacados de internet.
 - Los pósters pertenecen a sus respectivos estudios.
+- El apartado de subscripciones lo definire mas adelante.
